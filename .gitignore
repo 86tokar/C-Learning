@@ -1,0 +1,16 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.sln.docstates
+*.csproj.user
+
+# Build results
+bin/
+obj/
+
+# Others
+TestResults/
+*.log
+*.tmp
+*.bak
