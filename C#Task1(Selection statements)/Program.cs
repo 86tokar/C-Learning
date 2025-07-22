@@ -1,5 +1,6 @@
 ﻿using System;
 
+// Verify an inputted number (positive, negative, zero);
 void verifyNumber(int num)
 {
     if (num < 0)
@@ -16,3 +17,20 @@ void verifyNumber(int num)
     }
 }
 verifyNumber(3);
+
+// Calculate digits count;
+
+void calculateCount(int num)
+{
+    if (num < 10 && num > -10)
+    {
+        Console.WriteLine("Single");
+    
+    }
+    else
+    {
+        Console.WriteLine("More");
+    }
+}
+calculateCount(0);
+
