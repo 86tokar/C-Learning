@@ -26,7 +26,6 @@ void calculateCount(int num)
     if (num < 10 && num > -10)
     {
         Console.WriteLine("Single");
-    
     }
     else
     {
@@ -73,3 +72,22 @@ void buildString(int num)
 }
 
 buildString(14569);
+
+// Equal or the biggest
+
+void compareNumbers(int num1, int num2)
+{
+    if (num1 > num2)
+    {
+        Console.WriteLine(num1);
+    }
+    else if (num1 < num2)
+    {
+        Console.WriteLine(num2);
+    }
+    else
+    {
+        Console.WriteLine("Numbers are equal");
+    }
+}
+compareNumbers(10, -10);
