@@ -91,3 +91,73 @@ void compareNumbers(int num1, int num2)
     }
 }
 compareNumbers(10, -10);
+
+// isTriangle
+void isTriangle(int num1, int num2, int num3)
+{
+    if ((num1 + num2 > num3) && (num1 + num3 > num1) && (num2 + num3 > num1))
+    {
+        Console.WriteLine("Triangle");
+    }
+    else
+    {
+        Console.WriteLine("Not");
+    }
+}
+isTriangle(1,2,3);
+
+// Count Positive numbers
+void CountPositive(int num1, int num2, int num3)
+{
+    int i = 0;
+        
+    if (num1 > 0)
+    {
+        i = i + 1;
+    }
+    if (num2 > 0)
+    {
+        i = i + 1;
+    }
+    if (num3 > 0)
+    {
+        i = i + 1;
+    }
+    Console.WriteLine(i);
+}
+CountPositive(1, -1, -1);
+
+// Count Positive and Negative numbers
+void CountPositiveNegative(int num1, int num2, int num3)
+{
+    int i = 0;
+    int j = 0;
+
+    if (num1 > 0)
+    {
+        i = i + 1;
+    }
+    else if (num1 < 0)
+    {
+        j = j + 1;
+    }
+    if (num2 > 0)
+    {
+        i = i + 1;
+    }
+    else if (num2 < 0)
+    {
+        j = j + 1;
+    }
+    if (num3 > 0)
+    {
+        i = i + 1;
+    }
+    else if (num3 < 0)
+    {
+        j = j + 1;
+    }
+    Console.WriteLine("Positive:" + i);
+    Console.WriteLine("Negative:" + j);
+}
+CountPositiveNegative(1, -1, -1);
