@@ -19,6 +19,25 @@ void verifyNumber(int num)
 }
 verifyNumber(3);
 
+void verifyNumberCase(int num)
+{
+    switch (num)
+    {
+        case -1:
+            Console.WriteLine("Negative");
+            break;
+        case 0:
+            Console.WriteLine("Zero");
+            break;
+        case 1:
+            Console.WriteLine("Positive");
+            break;
+    }
+}
+
+
+verifyNumberCase(0);
+
 // Calculate digits count;
 
 void calculateCount(int num)
