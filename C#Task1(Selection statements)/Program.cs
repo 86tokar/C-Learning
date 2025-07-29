@@ -2,13 +2,13 @@
 
 // Verify an inputted number (positive, negative, zero);
 
-void verifyNumber(int num)
+void VerifyNumber(int insertedNumber)
 {
-    if (num < 0)
+    if (insertedNumber < 0)
     {
         Console.WriteLine("Negative");
     }
-    else if (num == 0)
+    else if (insertedNumber == 0)
     {
         Console.WriteLine("Zero");
     }
@@ -17,11 +17,11 @@ void verifyNumber(int num)
         Console.WriteLine("Positive");
     }
 }
-verifyNumber(3);
+VerifyNumber(3);
 
-void verifyNumberCase(int num)
+void VerifyNumberCase(int insertedNumber)
 {
-    switch (num)
+    switch (insertedNumber)
     {
         case -1:
             Console.WriteLine("Negative");
@@ -36,13 +36,13 @@ void verifyNumberCase(int num)
 }
 
 
-verifyNumberCase(0);
+VerifyNumberCase(0);
 
 // Calculate digits count;
 
-void calculateCount(int num)
+void CalculateCount(int singleOrMoreDigits)
 {
-    if (num < 10 && num > -10)
+    if (singleOrMoreDigits < 10 && singleOrMoreDigits > -10)
     {
         Console.WriteLine("Single");
     }
@@ -51,19 +51,19 @@ void calculateCount(int num)
         Console.WriteLine("More");
     }
 }
-calculateCount(0);
+CalculateCount(0);
 
 // Calculate result
 
-void calculateResult(int num)
+void CalculateResult(int insertedNumber)
 {
-    if (num > 0)
+    if (insertedNumber > 0)
     {
-        Console.WriteLine(num + 1);
+        Console.WriteLine(insertedNumber + 1);
     }
-    else if (num < 0)
+    else if (insertedNumber < 0)
     {
-        Console.WriteLine(num - 2);
+        Console.WriteLine(insertedNumber - 2);
     }
     else
     {
@@ -71,50 +71,50 @@ void calculateResult(int num)
     }
 }
 
-calculateResult(0);
+CalculateResult(0);
 
 // Build correct string
-void buildString(int num)
+void BuildString(int programistAmount)
 {
-    if (num % 10 == 0 || num % 10 == 5 || num % 10 == 6 || num % 10 == 7 || num % 10 == 8 || num % 10 == 9)
+    if (programistAmount % 10 == 0 || programistAmount % 10 == 5 || programistAmount % 10 == 6 || programistAmount % 10 == 7 || programistAmount % 10 == 8 || programistAmount % 10 == 9)
     {
-        Console.WriteLine(num + " programistov");
+        Console.WriteLine(programistAmount + " programistov");
     }
-    else if (num % 10 == 1)
+    else if (programistAmount % 10 == 1)
     {
-        Console.WriteLine(num + " programist");
+        Console.WriteLine(programistAmount + " programist");
     }
     else 
     { 
-        Console.WriteLine(num + " programista");
+        Console.WriteLine(programistAmount + " programista");
     }
 }
 
-buildString(14569);
+BuildString(14569);
 
 // Equal or the biggest
 
-void compareNumbers(int num1, int num2)
+void CompareNumbers(int firstNumber, int secondNumber)
 {
-    if (num1 > num2)
+    if (firstNumber > secondNumber)
     {
-        Console.WriteLine(num1);
+        Console.WriteLine(firstNumber);
     }
-    else if (num1 < num2)
+    else if (firstNumber < secondNumber)
     {
-        Console.WriteLine(num2);
+        Console.WriteLine(secondNumber);
     }
     else
     {
         Console.WriteLine("Numbers are equal");
     }
 }
-compareNumbers(10, -10);
+CompareNumbers(10, -10);
 
 // isTriangle
-void isTriangle(int num1, int num2, int num3)
+void IsTriangle(int side1, int side2, int side3)
 {
-    if ((num1 + num2 > num3) && (num1 + num3 > num1) && (num2 + num3 > num1))
+    if ((side1 + side2 > side3) && (side1 + side3 > side2) && (side2 + side3 > side1))
     {
         Console.WriteLine("Triangle");
     }
@@ -123,22 +123,22 @@ void isTriangle(int num1, int num2, int num3)
         Console.WriteLine("Not");
     }
 }
-isTriangle(1,2,3);
+IsTriangle(1,2,3);
 
 // Count Positive numbers
-void CountPositive(int num1, int num2, int num3)
+void CountPositive(int number1, int number2, int number3)
 {
     int i = 0;
         
-    if (num1 > 0)
+    if (number1 > 0)
     {
         i = i + 1;
     }
-    if (num2 > 0)
+    if (number2 > 0)
     {
         i = i + 1;
     }
-    if (num3 > 0)
+    if (number3 > 0)
     {
         i = i + 1;
     }
@@ -147,32 +147,32 @@ void CountPositive(int num1, int num2, int num3)
 CountPositive(1, -1, -1);
 
 // Count Positive and Negative numbers
-void CountPositiveNegative(int num1, int num2, int num3)
+void CountPositiveNegative(int number1, int number2, int number3)
 {
     int i = 0;
     int j = 0;
 
-    if (num1 > 0)
+    if (number1 > 0)
     {
         i = i + 1;
     }
-    else if (num1 < 0)
+    else if (number2 < 0)
     {
         j = j + 1;
     }
-    if (num2 > 0)
+    if (number3 > 0)
     {
         i = i + 1;
     }
-    else if (num2 < 0)
+    else if (number2 < 0)
     {
         j = j + 1;
     }
-    if (num3 > 0)
+    if (number3 > 0)
     {
         i = i + 1;
     }
-    else if (num3 < 0)
+    else if (number3 < 0)
     {
         j = j + 1;
     }
