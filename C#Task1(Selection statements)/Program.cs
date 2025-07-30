@@ -11,7 +11,8 @@
         int insertedNumberCase = GetIntInput("Enter integer number for task 1(check positive/negative/zero)");
         Task1SwitchCase.VerifyNumberCase(insertedNumberCase);
 
-        int singleOrMoreDigits = GetIntInput("Enter integer number for task2(Check one digits ore more)");
+        Console.Write("Inter number as string");
+        string singleOrMoreDigits = Console.ReadLine();
         Task2.CalculateDigitsCount(singleOrMoreDigits);
 
         int insertedNumberTask3 = GetIntInput("Enter integer number for task3(Calculate a result)");
@@ -105,17 +106,31 @@ class Task1
 
     class Task2
     {
-        public static void CalculateDigitsCount(int singleOrMoreDigits)
+
+    public static void CalculateDigitsCount(string singleOrMoreDigits)
+    {
+        
+        string resultNumber = singleOrMoreDigits.Replace("+", "").Replace("-", "").TrimStart('0');
+
+        
+        if (string.IsNullOrEmpty(resultNumber))
         {
-            if (singleOrMoreDigits < 10 && singleOrMoreDigits > -10)
-            {
-                Console.WriteLine("Single");
-            }
-            else
-            {
-                Console.WriteLine("More");
-            }
+            resultNumber = "0"; 
         }
+
+        
+        int digitCount = resultNumber.Length;
+
+        if (digitCount == 1)
+        {
+            Console.WriteLine("Single");
+        }
+        else
+        {
+            Console.WriteLine("More");
+        }
+        
+    }
     }
 
     class Task3
