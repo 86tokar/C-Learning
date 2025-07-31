@@ -8,9 +8,6 @@
         int insertedNumber = GetIntInput("Enter integer number for task 1(check positive/negative/zero)");
         Task1.VerifyNumber(insertedNumber);
 
-        int insertedNumberCase = GetIntInput("Enter integer number for task 1(check positive/negative/zero)");
-        Task1SwitchCase.VerifyNumberCase(insertedNumberCase);
-
         Console.Write("Inter number as string");
         string singleOrMoreDigits = Console.ReadLine();
         Task2.CalculateDigitsCount(singleOrMoreDigits);
@@ -82,27 +79,7 @@ class Task1
         }
     }
 
-    class Task1SwitchCase
-    {
-        public static void VerifyNumberCase(int insertedNumber)
-        {
-            switch (insertedNumber)
-            {
-                case -1:
-                    Console.WriteLine("Negative");
-                    break;
-                case 0:
-                    Console.WriteLine("Zero");
-                    break;
-                case 1:
-                    Console.WriteLine("Positive");
-                    break;
-                default:
-                    Console.WriteLine("Other");
-                    break;
-            }
-        }
-    }
+
 
     class Task2
     {
@@ -137,17 +114,18 @@ class Task1
     {
         public static void CalculateResult(int insertedNumber)
         {
-            if (insertedNumber > 0)
+      
+            switch (insertedNumber)
             {
-                Console.WriteLine(insertedNumber + 1);
-            }
-            else if (insertedNumber < 0)
-            {
-                Console.WriteLine(insertedNumber - 2);
-            }
-            else
-            {
-                Console.WriteLine(10);
+                case > 0:
+                    Console.WriteLine(insertedNumber + 1);
+                    break;
+                case < 0:
+                    Console.WriteLine(insertedNumber - 2);
+                    break;
+                default:
+                    Console.WriteLine(10);
+                    break;
             }
         }
     }
@@ -156,22 +134,20 @@ class Task1
     {
         public static void BuildString(int programistAmount)
         {
-            int lastDigit = programistAmount % 10;
-            int lastTwoDigits = programistAmount % 100;
+            switch (programistAmount % 10)
+            {
+                case var x when (x == 0 || (x >= 5 && x <= 9)):
+                    Console.WriteLine(programistAmount + " programistov");
+                    break;
+                case 1:
+                    Console.WriteLine(programistAmount + " programist");
+                    break;
+                default:
+                    Console.WriteLine(programistAmount + "programista");
+                    break;
+            }
 
-            if ((lastTwoDigits >= 11 && lastTwoDigits <= 14) ||
-                lastDigit == 0 || lastDigit >= 5)
-            {
-                Console.WriteLine(programistAmount + " programistov");
-            }
-            else if (lastDigit == 1)
-            {
-                Console.WriteLine(programistAmount + " programist");
-            }
-            else
-            {
-                Console.WriteLine(programistAmount + " programista");
-            }
+            
         }
     }
 
