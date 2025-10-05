@@ -14,7 +14,11 @@ class Program
 
         int amountOfElementsInArray = GetIntInput("Enter amount of array elements for Task3 ");
         Task3.CalculatePositiveArray(amountOfElementsInArray);
-        Console.ReadKey();
+
+        int firstNum = GetIntInput("Enter first integer value ");
+        int secondNum = GetIntInput("Enter second integer value ");
+        Task4.MultNum(firstNum, secondNum);
+        Console.ReadLine();
 
         static int GetIntInput(string prompt)
         {
@@ -96,6 +100,26 @@ class Task3
 
         }
         Console.WriteLine(sum);
+    }
+
+}
+
+
+class Task4
+{
+    public static void MultNum(int firstNum, int secondNum)
+    {
+        int multiplication = 0;
+        if (secondNum < 0)
+        {
+            firstNum = -firstNum;
+            secondNum = -secondNum;
+        }
+        for (int i = 0; i < secondNum; i = i + 1)
+        {
+            multiplication = multiplication + firstNum;
+        }
+        Console.WriteLine(multiplication);
     }
 
 }
