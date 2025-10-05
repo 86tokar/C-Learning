@@ -4,9 +4,13 @@ class Program
 {
     static void Main()
     {
-        int hours = GetIntInput("Enter amount of hours for Task1 ");
-        Task1.CalculateDistance(hours);
-        Console.ReadLine();
+        int hoursDistance = GetIntInput("Enter amount of hours for Task1 ");
+        Task1.CalculateDistance(hoursDistance);
+        
+
+        int hoursAmeba = GetIntInput("Enter amount of hours for Task2 ");
+        Task2.CalculateAmeba(hoursAmeba);
+        Console.ReadKey();
 
         static int GetIntInput(string prompt)
         {
@@ -46,4 +50,22 @@ class Task1
         Console.WriteLine(totalDistance);
     }
         
+}
+
+
+class Task2
+{
+    public static void CalculateAmeba(int hours)
+    {
+        int amebaAmount = 1;
+        int timeStep = 3;
+        int currentTime = timeStep;
+        while (currentTime <= hours)
+        {
+            amebaAmount = amebaAmount * 2;
+            Console.WriteLine(amebaAmount);
+            currentTime = currentTime + timeStep;
+        }
+    }
+
 }
