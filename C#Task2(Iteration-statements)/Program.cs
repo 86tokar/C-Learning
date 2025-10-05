@@ -10,6 +10,10 @@ class Program
 
         int hoursAmeba = GetIntInput("Enter amount of hours for Task2 ");
         Task2.CalculateAmeba(hoursAmeba);
+        
+
+        int amountOfElementsInArray = GetIntInput("Enter amount of array elements for Task3 ");
+        Task3.CalculatePositiveArray(amountOfElementsInArray);
         Console.ReadKey();
 
         static int GetIntInput(string prompt)
@@ -66,6 +70,32 @@ class Task2
             Console.WriteLine(amebaAmount);
             currentTime = currentTime + timeStep;
         }
+    }
+
+}
+
+
+class Task3
+{
+    public static void CalculatePositiveArray(int arrayLength)
+    {
+        int[] taskArray = new int[arrayLength + 1];
+
+        for (int i = 0; i <= arrayLength; i++)
+        {
+            taskArray[i] = i;
+        }
+
+        int sum = 0;
+        foreach (int i in taskArray)
+        {
+            if (i > 0)
+            {
+                sum = sum + taskArray[i];
+            }
+
+        }
+        Console.WriteLine(sum);
     }
 
 }
