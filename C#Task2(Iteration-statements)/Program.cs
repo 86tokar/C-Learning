@@ -6,11 +6,11 @@ class Program
     {
         //int hoursDistance = GetIntInput("Enter amount of hours for Task1 ");
         //Task1.CalculateDistance(hoursDistance);
-        
+
 
         //int hoursAmeba = GetIntInput("Enter amount of hours for Task2 ");
         //Task2.CalculateAmeba(hoursAmeba);
-        
+
 
         //int amountOfElementsInArray = GetIntInput("Enter amount of array elements for Task3 ");
         //Task3.CalculatePositiveArray(amountOfElementsInArray);
@@ -19,7 +19,15 @@ class Program
         //int secondNum = GetIntInput("Enter second integer value ");
         //Task4.MultNum(firstNum, secondNum);
 
-        Task5.InchToCm();
+        //Task5.InchToCm();
+        
+
+        //Task6.EvenNum();
+
+
+        //Task7.OddNum();
+
+        Task8.ShowTriangles();
         Console.ReadLine();
 
         static int GetIntInput(string prompt)
@@ -144,3 +152,78 @@ class Task5
     }
 
 }
+
+
+class Task6
+{
+    public static void EvenNum()
+    {
+        int[] num = new int[101];
+        for (int i = 0; i <= 100; i++)
+        {
+            num[i] = i;
+        }
+        foreach (int el in num)
+        {
+            if (el % 2 == 0)
+            {
+                Console.WriteLine(el);
+            }
+        }
+        for (int i = 0; i <= 100; i = i + 2)
+        {
+            Console.WriteLine(i);
+        }
+
+    }
+}
+
+
+class Task7
+{
+    public static void OddNum()
+    {
+        int[] num = new int[101];
+
+
+        for (int i = 0; i <= 100; i++)
+        {
+            num[i] = i;
+        }
+
+
+        foreach (int el in num)
+        {
+            if (el % 2 != 0)
+            {
+                Console.WriteLine(el);
+            }
+        }
+
+        for (int i = 1; i <= 100; i = i + 2)
+        {
+            Console.WriteLine(i);
+        }
+    }
+}
+
+
+class Task8
+{
+    public static void ShowTriangles()
+    {
+        for (int i = 1; i <= 5; i++)
+        {
+            Console.WriteLine(new string('*', i));
+        }
+        Console.WriteLine();
+        Console.WriteLine();
+        for (int i = 5; i >= 1; i--)
+        {
+            Console.WriteLine(new string('*', i));
+        }
+    }
+}
+
+
+
