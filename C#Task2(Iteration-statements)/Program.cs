@@ -4,20 +4,22 @@ class Program
 {
     static void Main()
     {
-        int hoursDistance = GetIntInput("Enter amount of hours for Task1 ");
-        Task1.CalculateDistance(hoursDistance);
+        //int hoursDistance = GetIntInput("Enter amount of hours for Task1 ");
+        //Task1.CalculateDistance(hoursDistance);
         
 
-        int hoursAmeba = GetIntInput("Enter amount of hours for Task2 ");
-        Task2.CalculateAmeba(hoursAmeba);
+        //int hoursAmeba = GetIntInput("Enter amount of hours for Task2 ");
+        //Task2.CalculateAmeba(hoursAmeba);
         
 
-        int amountOfElementsInArray = GetIntInput("Enter amount of array elements for Task3 ");
-        Task3.CalculatePositiveArray(amountOfElementsInArray);
+        //int amountOfElementsInArray = GetIntInput("Enter amount of array elements for Task3 ");
+        //Task3.CalculatePositiveArray(amountOfElementsInArray);
 
-        int firstNum = GetIntInput("Enter first integer value ");
-        int secondNum = GetIntInput("Enter second integer value ");
-        Task4.MultNum(firstNum, secondNum);
+        //int firstNum = GetIntInput("Enter first integer value ");
+        //int secondNum = GetIntInput("Enter second integer value ");
+        //Task4.MultNum(firstNum, secondNum);
+
+        Task5.InchToCm();
         Console.ReadLine();
 
         static int GetIntInput(string prompt)
@@ -120,6 +122,25 @@ class Task4
             multiplication = multiplication + firstNum;
         }
         Console.WriteLine(multiplication);
+    }
+
+}
+
+class Task5
+{
+    public static void InchToCm()
+    {
+        int[] monics = new int[21];
+        for (int i = 0; i < 21; i = i + 1)
+        {
+            monics[i] = i + 1;
+        }
+        foreach (int mon in monics)
+        {
+            double cm = mon * 2.54;
+            Console.WriteLine(cm);
+        }
+
     }
 
 }
