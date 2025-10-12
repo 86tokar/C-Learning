@@ -5,11 +5,14 @@ class Program
     static void Main()
     {
 
-        int[] positiveNumbers = GetPositiveArrayFromKeyboard();
-        Task1.VerifyAscArray(positiveNumbers);
+        //int[] positiveNumbers = GetPositiveArrayFromKeyboard();
+        //Task1.VerifyAscArray(positiveNumbers);
 
-        int[] positiveNumbersInArrayWithRange = GetPositiveArrayWithRangeCheck();
-        Task2.GetMaximumNumberInArray(positiveNumbersInArrayWithRange);
+        //int[] positiveNumbersInArrayWithRange = GetPositiveArrayWithRangeCheck();
+        //Task2.GetMaximumNumberInArray(positiveNumbersInArrayWithRange);
+
+        int[] anyArray = CreateIntArray();
+        Task3.GetSecondMaximum(anyArray);
 
 
 
@@ -76,7 +79,7 @@ class Program
                 if (value < 0 || value > 16)
                 {
                     Console.WriteLine("Element is out of range (0–16). Please enter again.");
-                    i--; 
+                    i--;
                 }
                 else
                 {
@@ -86,6 +89,21 @@ class Program
 
             return array;
         }
+
+        static int[] CreateIntArray()
+        {
+            int n = GetIntInput("Enter amounts of elements");
+            int[] arr = new int[n];
+
+            for (int i = 0; i < n; i++)
+            {
+                arr[i] = GetIntInput($"enter element {i + 1}: ");
+            }
+
+            return arr;
+        }
+
+
 
         Console.WriteLine("Press any key to exit...");
         Console.ReadKey();
@@ -119,6 +137,45 @@ class Task2
         int maxNumber = positiveNumbers.Max();
 
         Console.WriteLine(maxNumber);
+    }
+}
+
+
+class Task3
+{
+    public static void GetSecondMaximum(int[] arr)
+    {
+        int max = arr[0];
+        int secondMax = arr[1];
+
+        // Если второй элемент больше первого — меняем их местами
+        if (secondMax > max)
+        {
+            int temp = max;
+            max = secondMax;
+            secondMax = temp;
+        }
+
+        // Проходим по оставшимся элементам массива
+        for (int i = 2; i < arr.Length; i++)
+        {
+            if (arr[i] > max)
+            {
+                secondMax = max;
+                max = arr[i];
+            }
+            else if (arr[i] > secondMax)
+            {
+                secondMax = arr[i];
+            }
+        }
+
+        // Вывод результатов
+        Console.WriteLine("Array elements:");
+        foreach (int num in arr)
+            Console.Write(num + " ");
+
+        Console.WriteLine($"\nSecond maximum number: {secondMax}");
     }
 }
 
