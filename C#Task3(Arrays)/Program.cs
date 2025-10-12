@@ -8,6 +8,9 @@ class Program
         int[] positiveNumbers = GetPositiveArrayFromKeyboard();
         Task1.VerifyAscArray(positiveNumbers);
 
+        int[] positiveNumbersInArrayWithRange = GetPositiveArrayWithRangeCheck();
+        Task2.GetMaximumNumberInArray(positiveNumbersInArrayWithRange);
+
 
 
 
@@ -61,6 +64,29 @@ class Program
             return array;
         }
 
+        static int[] GetPositiveArrayWithRangeCheck()
+        {
+            int amount = GetPositiveIntInput("Enter amount of elements in the array: ");
+            int[] array = new int[amount];
+
+            for (int i = 0; i < amount; i++)
+            {
+                int value = GetIntInput("Enter element(0–16)");
+
+                if (value < 0 || value > 16)
+                {
+                    Console.WriteLine("Element is out of range (0–16). Please enter again.");
+                    i--; 
+                }
+                else
+                {
+                    array[i] = value;
+                }
+            }
+
+            return array;
+        }
+
         Console.WriteLine("Press any key to exit...");
         Console.ReadKey();
 
@@ -83,6 +109,16 @@ class Task1
         }
 
         Console.WriteLine("Yes");
+    }
+}
+
+class Task2
+{
+    public static void GetMaximumNumberInArray(int[] positiveNumbers)
+    {
+        int maxNumber = positiveNumbers.Max();
+
+        Console.WriteLine(maxNumber);
     }
 }
 
