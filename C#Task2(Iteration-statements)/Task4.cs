@@ -16,7 +16,7 @@ namespace C_Task2_Iteration_statements_
                 firstNum = -firstNum;
                 secondNum = -secondNum;
             }
-            for (int i = 0; i < secondNum; i = i + 1)
+            for (int i = 0; i < secondNum; i++)
             {
                 multiplication = multiplication + firstNum;
             }

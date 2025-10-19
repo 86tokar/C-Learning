@@ -10,19 +10,14 @@ namespace C_Task2_Iteration_statements_
     {
         public static void EvenNum()
         {
-            int[] num = new int[101];
             for (int i = 0; i <= 100; i++)
             {
-                num[i] = i;
-            }
-            foreach (int el in num)
-            {
-                if (el % 2 == 0)
+                if (i % 2 == 0)
                 {
-                    Console.WriteLine(el);
+                    Console.WriteLine(i);
                 }
             }
-            for (int i = 0; i <= 100; i = i + 2)
+            for (int i = 0; i <= 100; i += 2)
             {
                 Console.WriteLine(i);
             }

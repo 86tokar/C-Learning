@@ -8,9 +8,8 @@ namespace C_Task2_Iteration_statements_
             //int hoursDistance = GetIntInput("Enter amount of hours for Task1 ");
             //Task1.CalculateDistance(hoursDistance);
 
-
-            int hoursAmeba = GetIntInput("Enter amount of hours for Task2 ");
-            Task2.CalculateAmeba(hoursAmeba);
+            //int hoursAmeba = GetIntInput("Enter amount of hours for Task2 ");
+            //Task2.CalculateAmeba(hoursAmeba);
 
             //int amountOfElementsInArray = GetIntInput("Enter amount of array elements for Task3 ");
             //Task3.CalculatePositiveArray(amountOfElementsInArray);
@@ -23,7 +22,7 @@ namespace C_Task2_Iteration_statements_
 
             //Task6.EvenNum();
 
-            //Task7.OddNum();
+            Task7.OddNum();
 
             //Task8.ShowTriangles();
             Console.ReadLine();

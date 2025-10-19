@@ -11,7 +11,7 @@ namespace C_Task2_Iteration_statements_
         public static void InchToCm()
         {
             int[] monics = new int[21];
-            for (int i = 0; i < 21; i = i + 1)
+            for (int i = 0; i < 21; i++)
             {
                 monics[i] = i + 1;
             }
