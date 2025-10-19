@@ -12,12 +12,10 @@ namespace C_Task2_Iteration_statements_
         {
             int amebaAmount = 1;
             int timeStep = 3;
-            int currentTime = timeStep;
-            while (currentTime <= hours)
+            for (int currentTime = timeStep; currentTime <= hours; currentTime += timeStep)
             {
-                amebaAmount = amebaAmount * 2;
+                amebaAmount *= 2;
                 Console.WriteLine(amebaAmount);
-                currentTime = currentTime + timeStep;
             }
         }
 

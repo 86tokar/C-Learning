@@ -15,8 +15,8 @@ namespace C_Task2_Iteration_statements_
             double totalDistance = firstHourKm;
             for (int h = 2; h <= hours; h++)
             {
-                currentDistance = currentDistance * 1.1;
-                totalDistance = totalDistance + currentDistance;
+                currentDistance *= 1.1;
+                totalDistance += currentDistance;
             }
             Console.WriteLine(totalDistance);
         }
