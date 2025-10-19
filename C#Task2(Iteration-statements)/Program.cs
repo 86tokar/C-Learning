@@ -22,9 +22,9 @@ namespace C_Task2_Iteration_statements_
 
             //Task6.EvenNum();
 
-            Task7.OddNum();
+            //Task7.OddNum();
 
-            //Task8.ShowTriangles();
+            Task8.ShowTriangles();
             Console.ReadLine();
 
             static int GetIntInput(string prompt)
