@@ -5,24 +5,24 @@ namespace C_Task2_Iteration_statements_
     {
         static void Main()
         {
-            //int hoursDistance = GetIntInput("Enter amount of hours for Task1 ");
-            //Task1.CalculateDistance(hoursDistance);
+            int hoursDistance = GetIntInput("Enter amount of hours for Task1 ");
+            Task1.CalculateDistance(hoursDistance);
 
-            //int hoursAmeba = GetIntInput("Enter amount of hours for Task2 ");
-            //Task2.CalculateAmeba(hoursAmeba);
+            int hoursAmeba = GetIntInput("Enter amount of hours for Task2 ");
+            Task2.CalculateAmeba(hoursAmeba);
 
-            //int amountOfElementsInArray = GetIntInput("Enter amount of array elements for Task3 ");
-            //Task3.CalculatePositiveArray(amountOfElementsInArray);
+            int amountOfElementsInArray = GetIntInput("Enter amount of array elements for Task3 ");
+            Task3.CalculatePositiveArray(amountOfElementsInArray);
 
-            //int firstNum = GetIntInput("Enter first integer value ");
-            //int secondNum = GetIntInput("Enter second integer value ");
-            //Task4.MultNum(firstNum, secondNum);
+            int firstNum = GetIntInput("Enter first integer value ");
+            int secondNum = GetIntInput("Enter second integer value ");
+            Task4.MultNum(firstNum, secondNum);
 
-            //Task5.InchToCm();
+            Task5.InchToCm();
 
-            //Task6.EvenNum();
+            Task6.EvenNum();
 
-            //Task7.OddNum();
+            Task7.OddNum();
 
             Task8.ShowTriangles();
             Console.ReadLine();
