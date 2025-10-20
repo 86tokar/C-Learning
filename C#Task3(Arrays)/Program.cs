@@ -5,17 +5,14 @@ class Program
     static void Main()
     {
 
-        //int[] positiveNumbers = GetPositiveArrayFromKeyboard();
-        //Task1.VerifyAscArray(positiveNumbers);
+        int[] positiveNumbers = GetPositiveArrayFromKeyboard();
+        Task1.VerifyAscArray(positiveNumbers);
 
-        //int[] positiveNumbersInArrayWithRange = GetPositiveArrayWithRangeCheck();
-        //Task2.GetMaximumNumberInArray(positiveNumbersInArrayWithRange);
+        int[] positiveNumbersInArrayWithRange = GetPositiveArrayWithRangeCheck();
+        Task2.GetMaximumNumberInArray(positiveNumbersInArrayWithRange);
 
         int[] anyArray = CreateIntArray();
         Task3.GetSecondMaximum(anyArray);
-
-
-
 
         static int GetIntInput(string prompt)
         {
@@ -25,13 +22,8 @@ class Program
                 Console.Write(prompt);
                 string input = Console.ReadLine();
                 if (int.TryParse(input, out result))
-                {
-                    return result;
-                }
-                else
-                {
-                    Console.WriteLine("Incorrect input, please inter integer number");
-                }
+                return result;
+                else Console.WriteLine("Incorrect input, please inter integer number");
             }
         }
 
@@ -42,13 +34,8 @@ class Program
             {
                 result = GetIntInput(prompt);
                 if (result > 0)
-                {
-                    return result;
-                }
-                else
-                {
-                    Console.WriteLine("Incorrect input, enter positive integer number please");
-                }
+                return result;
+                else Console.WriteLine("Incorrect input, enter positive integer number please");
             }
         }
 
@@ -103,13 +90,8 @@ class Program
             return arr;
         }
 
-
-
         Console.WriteLine("Press any key to exit...");
         Console.ReadKey();
-
-
-
     }
 }
 
@@ -148,7 +130,6 @@ class Task3
         int max = arr[0];
         int secondMax = arr[1];
 
-        // Если второй элемент больше первого — меняем их местами
         if (secondMax > max)
         {
             int temp = max;
@@ -156,7 +137,6 @@ class Task3
             secondMax = temp;
         }
 
-        // Проходим по оставшимся элементам массива
         for (int i = 2; i < arr.Length; i++)
         {
             if (arr[i] > max)
@@ -170,7 +150,6 @@ class Task3
             }
         }
 
-        // Вывод результатов
         Console.WriteLine("Array elements:");
         foreach (int num in arr)
             Console.Write(num + " ");
