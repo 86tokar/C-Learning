@@ -8,6 +8,7 @@ namespace C_Task2_Iteration_statements_
 {
     class Task1
     {
+        int hoursDistance = Methods.GetIntInput("Enter amount of hours for Task1 ");
         public static void CalculateDistance(int hours)
         {
             int firstHourKm = 10;

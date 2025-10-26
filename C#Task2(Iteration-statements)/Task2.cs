@@ -8,6 +8,7 @@ namespace C_Task2_Iteration_statements_
 {
     class Task2
     {
+        int hoursAmeba = Methods.GetIntInput("Enter amount of hours for Task2 ");
         public static void CalculateAmeba(int hours)
         {
             int amebaAmount = 1;

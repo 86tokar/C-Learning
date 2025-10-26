@@ -8,6 +8,8 @@ namespace C_Task2_Iteration_statements_
 {
     class Task4
     {
+        int firstNum = Methods.GetIntInput("Enter first integer value ");
+        int secondNum = Methods.GetIntInput("Enter second integer value ");
         public static void MultNum(int firstNum, int secondNum)
         {
             int multiplication = 0;

@@ -8,6 +8,7 @@ namespace C_Task2_Iteration_statements_
 {
     class Task3
     {
+        int amountOfElementsInArray = Methods.GetIntInput("Enter amount of array elements for Task3 ");
         public static void CalculatePositiveArray(int arrayLength)
         {
             int[] taskArray = new int[arrayLength + 1];
