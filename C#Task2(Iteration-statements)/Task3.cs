@@ -22,7 +22,7 @@ namespace C_Task2_Iteration_statements_
             {
                 if (i > 0)
                 {
-                    sum = sum + taskArray[i];
+                    sum += taskArray[i];
                 }
 
             }
