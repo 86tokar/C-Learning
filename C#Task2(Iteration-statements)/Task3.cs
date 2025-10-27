@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C_Task2_Iteration_statements_
+namespace C_Task2_Iteration_statements
 {
-    class Task3
+    public class Task3:ITask
     {
-        int amountOfElementsInArray = Methods.GetIntInput("Enter amount of array elements for Task3 ");
-        public static void CalculatePositiveArray(int arrayLength)
+        public void Execute()
         {
-            int[] taskArray = new int[arrayLength + 1];
+            int amountOfElementsInArray = Methods.GetIntInput("Enter amount of array elements for Task3 ");
+            int[] taskArray = new int[amountOfElementsInArray + 1];
 
-            for (int i = 0; i <= arrayLength; i++)
+            for (int i = 0; i <= amountOfElementsInArray; i++)
             {
                 taskArray[i] = i;
             }

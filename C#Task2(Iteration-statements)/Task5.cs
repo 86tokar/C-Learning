@@ -1,14 +1,15 @@
 ﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C_Task2_Iteration_statements_
+namespace C_Task2_Iteration_statements
 {
-    class Task5
+    public class Task5:ITask
     {
-        public static void InchToCm()
+        public void Execute()
         {
             int[] monics = new int[21];
             for (int i = 0; i < 21; i++)

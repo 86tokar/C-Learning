@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C_Task2_Iteration_statements_
+namespace C_Task2_Iteration_statements
 {
-    class Task2
+    public class Task2 : ITask
     {
-        int hoursAmeba = Methods.GetIntInput("Enter amount of hours for Task2 ");
-        public static void CalculateAmeba(int hours)
-        {
+        public void Execute()
+        {   
+            int hoursAmeba = Methods.GetIntInput("Enter amount of hours for Task2 ");
             int amebaAmount = 1;
             int timeStep = 3;
-            for (int currentTime = timeStep; currentTime <= hours; currentTime += timeStep)
+            for (int currentTime = timeStep; currentTime <= hoursAmeba; currentTime += timeStep)
             {
                 amebaAmount *= 2;
                 Console.WriteLine(amebaAmount);

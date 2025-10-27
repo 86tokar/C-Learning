@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C_Task2_Iteration_statements_
+namespace C_Task2_Iteration_statements
 {
-    class Task6
+    public class Task6:ITask
     {
-        public static void EvenNum()
+        public void Execute()
         {
             for (int i = 0; i <= 100; i++)
             {

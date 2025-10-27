@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C_Task2_Iteration_statements_
+namespace C_Task2_Iteration_statements
 {
-    class Task8
+    public class Task8:ITask
     {
-        public static void ShowTriangles()
+        public void Execute()
         {
             for (int i = 1; i <= 5; i++) 
             {

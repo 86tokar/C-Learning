@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C_Task2_Iteration_statements_
+namespace C_Task2_Iteration_statements
 {
     class Methods
     {
@@ -13,7 +13,7 @@ namespace C_Task2_Iteration_statements_
             int result;
             while (true)
             {
-                Console.Write(prompt);
+                Console.WriteLine(prompt);
                 string input = Console.ReadLine();
                 if (int.TryParse(input, out result))
                 {

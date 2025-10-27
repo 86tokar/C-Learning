@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C_Task2_Iteration_statements_
+namespace C_Task2_Iteration_statements
 {
-    class Task4
+    public class Task4 : ITask
     {
-        int firstNum = Methods.GetIntInput("Enter first integer value ");
-        int secondNum = Methods.GetIntInput("Enter second integer value ");
-        public static void MultNum(int firstNum, int secondNum)
+        
+        public void Execute()
         {
+            int firstNum = Methods.GetIntInput("Enter first integer value ");
+            int secondNum = Methods.GetIntInput("Enter second integer value ");
             int multiplication = 0;
             if (secondNum < 0)
             {

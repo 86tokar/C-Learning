@@ -4,23 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C_Task2_Iteration_statements_
+namespace C_Task2_Iteration_statements  
 {
-    class Task1
+    public class Task1 : ITask  
     {
-        int hoursDistance = Methods.GetIntInput("Enter amount of hours for Task1 ");
-        public static void CalculateDistance(int hours)
+        public void Execute()
         {
-            int firstHourKm = 10;
+            int hours = Methods.GetIntInput("Enter amount of hours for Task1: ");  
+            int firstHourKm = 10;  
             double currentDistance = firstHourKm;
             double totalDistance = firstHourKm;
             for (int h = 2; h <= hours; h++)
             {
-                currentDistance *= 1.1;
+                currentDistance *= 1.1;  
                 totalDistance += currentDistance;
             }
+
             Console.WriteLine(totalDistance);
         }
-
     }
 }
