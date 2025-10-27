@@ -8,7 +8,6 @@ namespace C_Task2_Iteration_statements
 {
     public class Task4 : ITask
     {
-        
         public void Execute()
         {
             int firstNum = Methods.GetIntInput("Enter first integer value ");

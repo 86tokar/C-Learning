@@ -25,7 +25,6 @@ namespace C_Task2_Iteration_statements
                 {
                     sum += taskArray[i];
                 }
-
             }
             Console.WriteLine(sum);
         }

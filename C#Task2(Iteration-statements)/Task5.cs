@@ -21,8 +21,6 @@ namespace C_Task2_Iteration_statements
                 double cm = mon * 2.54;
                 Console.WriteLine(cm);
             }
-
         }
-
     }
 }

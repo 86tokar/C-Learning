@@ -30,13 +30,6 @@ namespace C_Task2_Iteration_statements
             ITask task8 = new Task8();
             task8.Execute();
             Console.ReadLine();
-
-
-            //Task5.InchToCm();
-            //Task6.EvenNum();
-            //Task7.OddNum();
-            //Task8.ShowTriangles();
-            //Console.ReadLine();
         }
     }
 }

@@ -21,7 +21,6 @@ namespace C_Task2_Iteration_statements
             {
                 Console.WriteLine(i);
             }
-
         }
     }
 }
