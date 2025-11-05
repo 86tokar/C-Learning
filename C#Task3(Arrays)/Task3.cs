@@ -15,24 +15,17 @@ namespace C_Task3_Arrays_
         }
         private static void GetSecondMaximum(int[] arr)
         {
-            int max = arr[0];
-            int secondMax = arr[1];
+            int max = int.MinValue;
+            int secondMax = int.MinValue;
 
-            if (secondMax > max)
-            {
-                int temp = max;
-                max = secondMax;
-                secondMax = temp;
-            }
-
-            for (int i = 2; i < arr.Length; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
                 if (arr[i] > max)
                 {
                     secondMax = max;
                     max = arr[i];
                 }
-                else if (arr[i] > secondMax)
+                else if (arr[i] != max && arr[i] > secondMax)
                 {
                     secondMax = arr[i];
                 }

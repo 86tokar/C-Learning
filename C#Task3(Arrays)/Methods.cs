@@ -72,13 +72,8 @@ namespace C_Task3_Arrays_
 
         public static int[] CreateIntArray()
         {
-<<<<<<< HEAD
             var integerArray = GetIntInput("Enter amounts of elements");
             var arr = new int[integerArray];
-=======
-            int integerArray = GetIntInput("Enter amounts of elements");
-            int[] arr = new int[integerArray];
->>>>>>> 93b94041ac0ebeb351f93fc92b7db74738d39648
 
             for (int i = 0; i < integerArray; i++)
             {
