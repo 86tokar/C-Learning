@@ -73,10 +73,10 @@ namespace C_Task3_Arrays_
 
         public static int[] CreateIntArray()
         {
-            int n = GetIntInput("Enter amounts of elements");
-            int[] arr = new int[n];
+            int integerArray = GetIntInput("Enter amounts of elements");
+            int[] arr = new int[integerArray];
 
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < integerArray; i++)
             {
                 arr[i] = GetIntInput($"enter element {i + 1}: ");
             }
