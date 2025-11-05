@@ -10,10 +10,10 @@ namespace C_Task3_Arrays_
     {
         public void Execute()
         {
-            int[] anyArray = Methods.CreateIntArray();
+            var anyArray = Methods.CreateIntArray();
             GetSecondMaximum(anyArray);
         }
-        public static void GetSecondMaximum(int[] arr)
+        private static void GetSecondMaximum(int[] arr)
         {
             int max = arr[0];
             int secondMax = arr[1];

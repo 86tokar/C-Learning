@@ -10,12 +10,12 @@ namespace C_Task3_Arrays_
     {
         public void Execute()
         {
-            int[] positiveNumbersInArrayWithRange = Methods.GetPositiveArrayWithRangeCheck();
+            var positiveNumbersInArrayWithRange = Methods.GetPositiveArrayWithRangeCheck();
             GetMaximumNumberInArray(positiveNumbersInArrayWithRange);
         }
-        public static void GetMaximumNumberInArray(int[] positiveNumbers)
+        private static void GetMaximumNumberInArray(int[] positiveNumbers)
         {
-            int maxNumber = positiveNumbers.Max();
+            var maxNumber = positiveNumbers.Max();
 
             Console.WriteLine(maxNumber);
         }

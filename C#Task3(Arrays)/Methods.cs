@@ -23,10 +23,9 @@ namespace C_Task3_Arrays_
 
         public static int GetPositiveIntInput(string prompt = "")
         {
-            int result;
             while (true)
             {
-                result = GetIntInput(prompt);
+              var result = GetIntInput(prompt);
                 if (result > 0)
                     return result;
                 else Console.WriteLine("Incorrect input, enter positive integer number please");
@@ -36,9 +35,9 @@ namespace C_Task3_Arrays_
         public static int[] GetPositiveArrayFromKeyboard()
         {
             Console.Write("Enter amount of elements in the array: ");
-            int amount = GetPositiveIntInput();
+            var amount = GetPositiveIntInput();
 
-            int[] array = new int[amount];
+            var array = new int[amount];
 
             for (int i = 0; i < amount; i++)
             {
@@ -50,8 +49,8 @@ namespace C_Task3_Arrays_
 
         public static int[] GetPositiveArrayWithRangeCheck()
         {
-            int amount = GetPositiveIntInput("Enter amount of elements in the array: ");
-            int[] array = new int[amount];
+            var amount = GetPositiveIntInput("Enter amount of elements in the array: ");
+            var array = new int[amount];
 
             for (int i = 0; i < amount; i++)
             {
@@ -73,10 +72,10 @@ namespace C_Task3_Arrays_
 
         public static int[] CreateIntArray()
         {
-            int n = GetIntInput("Enter amounts of elements");
-            int[] arr = new int[n];
+            var integerArray = GetIntInput("Enter amounts of elements");
+            var arr = new int[integerArray];
 
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < integerArray; i++)
             {
                 arr[i] = GetIntInput($"enter element {i + 1}: ");
             }

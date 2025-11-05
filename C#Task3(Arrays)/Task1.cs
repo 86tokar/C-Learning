@@ -10,10 +10,10 @@ namespace C_Task3_Arrays_
     {
         public void Execute()
         {
-            int[] positiveNumbers = Methods.GetPositiveArrayFromKeyboard();
+            var positiveNumbers = Methods.GetPositiveArrayFromKeyboard();
             VerifyAscArray(positiveNumbers);
         }
-        public static void VerifyAscArray(int[] positiveNumbers)
+        private static void VerifyAscArray(int[] positiveNumbers)
         {
             for (int i = 0; i < positiveNumbers.Length - 1; i++)
             {
