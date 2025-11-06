@@ -1,0 +1,80 @@
+﻿namespace C_Task3_Arrays_
+{
+    class Methods
+    {
+        public static int GetIntInput(string prompt)
+        {
+            
+            while (true)
+            {
+                Console.Write(prompt);
+                var input = Console.ReadLine();
+                if (int.TryParse(input, out int result))
+                    return result;
+                else Console.WriteLine("Incorrect input, please inter integer number");
+            }
+        }
+
+        public static int GetPositiveIntInput(string prompt = "")
+        {
+            while (true)
+            {
+              var result = GetIntInput(prompt);
+                if (result > 0)
+                    return result;
+                else Console.WriteLine("Incorrect input, enter positive integer number please");
+            }
+        }
+
+        public static int[] GetPositiveArrayFromKeyboard()
+        {
+            Console.Write("Enter amount of elements in the array: ");
+            var amount = GetPositiveIntInput();
+
+            var array = new int[amount];
+
+            for (int i = 0; i < amount; i++)
+            {
+                array[i] = GetPositiveIntInput($"Enter element {i + 1}: ");
+            }
+
+            return array;
+        }
+
+        public static int[] GetPositiveArrayWithRangeCheck()
+        {
+            var amount = GetPositiveIntInput("Enter amount of elements in the array: ");
+            var array = new int[amount];
+
+            for (int i = 0; i < amount; i++)
+            {
+                int value = GetIntInput("Enter element(0–16)");
+
+                if (value < 0 || value > 16)
+                {
+                    Console.WriteLine("Element is out of range (0–16). Please enter again.");
+                    i--;
+                }
+                else
+                {
+                    array[i] = value;
+                }
+            }
+
+            return array;
+        }
+
+        public static int[] CreateIntArray()
+        {
+            var integerArray = GetIntInput("Enter amounts of elements");
+            var arr = new int[integerArray];
+
+            for (int i = 0; i < integerArray; i++)
+            {
+                arr[i] = GetIntInput($"enter element {i + 1}: ");
+            }
+
+            return arr;
+        }
+    }
+}
