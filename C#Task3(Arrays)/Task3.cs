@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace C_Task3_Arrays_
+﻿namespace C_Task3_Arrays_
 {
     public class Task3 : ITask
     {
