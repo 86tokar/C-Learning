@@ -8,7 +8,7 @@
             while (true)
             {
                 Console.Write(prompt);
-                string input = Console.ReadLine();
+                var input = Console.ReadLine();
                 if (int.TryParse(input, out int result))
                     return result;
                 else Console.WriteLine("Incorrect input, please inter integer number");

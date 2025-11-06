@@ -1,5 +1,4 @@
-﻿
-namespace C_Task3_Arrays_
+﻿namespace C_Task3_Arrays_
 {
     public interface ITask
     {

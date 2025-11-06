@@ -14,6 +14,7 @@
                 if (positiveNumbers[i] >= positiveNumbers[i + 1])
                 {
                     Console.WriteLine("No");
+
                     return;
                 }
             }

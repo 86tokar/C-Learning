@@ -26,7 +26,7 @@
             }
 
             Console.WriteLine("Array elements:");
-            foreach (int num in arr)
+            foreach (var num in arr)
                 Console.Write(num + " ");
 
             Console.WriteLine($"\nSecond maximum number: {secondMax}");
