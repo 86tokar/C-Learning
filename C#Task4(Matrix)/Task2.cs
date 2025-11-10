@@ -20,15 +20,15 @@
 
         public static void ReturnOddNumbers(int[,] matrix)
         {
-        Console.WriteLine("Odd numbers: ");
+            Console.WriteLine("Odd numbers: ");
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
-                { 
+                {
                     if (matrix[i, j] % 2 != 0)
-                    Console.WriteLine(matrix[i, j]);
-                    
-}
+                        Console.WriteLine(matrix[i, j]);
+
+                }
             }
         }
     }
