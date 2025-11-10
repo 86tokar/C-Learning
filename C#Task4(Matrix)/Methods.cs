@@ -14,7 +14,7 @@
                     while (true)
                     {
                         Console.Write($"positiveIntMatrix[{i},{j}] = ");
-                        string input = Console.ReadLine();
+                        var input = Console.ReadLine();
 
                         if (int.TryParse(input, out int value) && value > 0)
                         {
