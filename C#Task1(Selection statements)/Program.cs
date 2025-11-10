@@ -60,8 +60,6 @@ class Program
             }
         }
 
-
-
     }
 }
 
@@ -111,7 +109,6 @@ class Task2
         {
             Console.WriteLine("More");
         }
-
     }
 }
 
@@ -151,8 +148,6 @@ class Task4
                 Console.WriteLine(programistAmount + "programista");
                 break;
         }
-
-
     }
 }
 

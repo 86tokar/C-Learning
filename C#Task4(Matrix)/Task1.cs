@@ -25,10 +25,9 @@
             for (int i = 0; i < mainDiagonalLength; i++)
             {
                 if (matrix[i, i] % 2 == 0)  
-                {
-                    sumMainDiagonalEven += matrix[i, i];
-                }
+                sumMainDiagonalEven += matrix[i, i];   
             }
+
             return sumMainDiagonalEven;
         }
     }
