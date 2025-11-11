@@ -20,8 +20,8 @@
 
         public static int SumEvenMainDiagonal(int[,] matrix)
         {
-            int sumMainDiagonalEven = 0;
-            int mainDiagonalLength = Math.Min(matrix.GetLength(0), matrix.GetLength(1)); 
+            var sumMainDiagonalEven = 0;
+            var mainDiagonalLength = Math.Min(matrix.GetLength(0), matrix.GetLength(1)); 
             for (int i = 0; i < mainDiagonalLength; i++)
             {
                 if (matrix[i, i] % 2 == 0)  
