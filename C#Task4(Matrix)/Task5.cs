@@ -20,7 +20,7 @@
 
         }
 
-        public static int[,] RevertAllDiagonalNumbersInMatrix(int[,] matrix)
+        private static int[,] RevertAllDiagonalNumbersInMatrix(int[,] matrix)
         {
             var rowsAmount = matrix.GetLength(0);
             var columnsAmount = matrix.GetLength(1);

@@ -14,29 +14,26 @@
             var matrix = Methods.CreatePositiveIntMatrix(rows, columns);
 
             Methods.PrintMatrix(matrix);
-            var multiplicationMainDiagonal = MainDiagonalMultiplication(matrix);
+            var multiplicationMainDiagonal = DiagonalMultiplication(matrix, "mainDiagonal");
             Console.WriteLine($"multiplication on main: {multiplicationMainDiagonal}");
 
-            var multiplicationSecondaryDiagonal = SecondaryDiagonalMultiplication(matrix);
+            var multiplicationSecondaryDiagonal = DiagonalMultiplication(matrix, "secondaryDiagonal");
             Console.WriteLine($"multiplication on secondary: {multiplicationSecondaryDiagonal}");
         }
 
-        public static int MainDiagonalMultiplication(int[,] matrix)
+        private static int DiagonalMultiplication(int[,] matrix, string diagonal)
         {
-            var multiplicationMainDiagonal = 1;
-            var DiagonalLength = Math.Min(matrix.GetLength(0), matrix.GetLength(1));
-            for (int i = 0; i < DiagonalLength; i++)
-                multiplicationMainDiagonal *= matrix[i, i];
-            return multiplicationMainDiagonal;
-        }
-        public static int SecondaryDiagonalMultiplication(int[,] matrix)
-        {
-            var multiplicationSecondaryDiagonal = 1;
-            var DiagonalLength = Math.Min(matrix.GetLength(0), matrix.GetLength(1));
+            var multiplicationDiagonal = 1;
             var columnsAmount = matrix.GetLength(1);
-            for (int i = 0; i < DiagonalLength; i++)
-                multiplicationSecondaryDiagonal *= matrix[i, columnsAmount - 1 - i];
-            return multiplicationSecondaryDiagonal;
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                if (diagonal == "mainDiagonal")
+                    multiplicationDiagonal *= matrix[i, i];
+                else if (diagonal == "secondaryDiagonal")
+                    multiplicationDiagonal *= matrix[i, columnsAmount - 1 - i];
+            }
+
+            return multiplicationDiagonal;
         }
     }
 }

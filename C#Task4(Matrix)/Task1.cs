@@ -18,11 +18,10 @@
             Console.WriteLine($"Sum: {sumMainDiagonalEven}");
         }
 
-        public static int SumEvenMainDiagonal(int[,] matrix)
+        private static int SumEvenMainDiagonal(int[,] matrix)
         {
             var sumMainDiagonalEven = 0;
-            var mainDiagonalLength = Math.Min(matrix.GetLength(0), matrix.GetLength(1)); 
-            for (int i = 0; i < mainDiagonalLength; i++)
+            for (int i = 0; i < matrix.GetLength(0); i++)
             {
                 if (matrix[i, i] % 2 == 0)  
                 sumMainDiagonalEven += matrix[i, i];   

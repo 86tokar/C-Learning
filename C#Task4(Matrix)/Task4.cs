@@ -19,12 +19,11 @@
 
         }
 
-        public static int SumEvenNumbersAboveMainDiagonal(int[,] matrix)
+        private static int SumEvenNumbersAboveMainDiagonal(int[,] matrix)
         {
             var sumEvenNumbersAboveMainDiagonal = 0;
-            var DiagonalLength = Math.Min(matrix.GetLength(0), matrix.GetLength(1));
             var columnsAmount = matrix.GetLength(1);
-            for (int i = 0; i < DiagonalLength; i++)
+            for (int i = 0; i < matrix.GetLength(0); i++)
             {
                 for (int j = i + 1; j < columnsAmount; j++)
                 {

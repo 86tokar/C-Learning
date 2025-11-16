@@ -14,22 +14,34 @@
             var matrix = Methods.CreatePositiveIntMatrix(rows, columns);
 
             Methods.PrintMatrix(matrix);
-            ReturnOddNumbers(matrix);
-
+            Console.WriteLine("all odd numbers from the matrix");
+            Console.WriteLine(string.Join(" ", ReturnOddNumbers(matrix)));
         }
 
-        public static void ReturnOddNumbers(int[,] matrix)
+        private static int[] ReturnOddNumbers(int[,] matrix)
         {
-            Console.WriteLine("Odd numbers: ");
+            var amountOfArrayElements = 0;
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
                     if (matrix[i, j] % 2 != 0)
-                        Console.WriteLine(matrix[i, j]);
-
+                        amountOfArrayElements++;
                 }
             }
+            var returnedOddNumbers = new int[amountOfArrayElements];
+
+            var elementIndex = 0;
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    if (matrix[i, j] % 2 != 0)
+                        returnedOddNumbers[elementIndex++] = matrix[i, j];
+                }
+            }
+
+            return returnedOddNumbers;
         }
     }
 }
